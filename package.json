@@ -1,0 +1,43 @@
+{
+  "name": "bagshop",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/montez": "^4.5.9",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.4",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "lint": "eslint src --cache --cache-location node_modules/.cache/.eslintcache",
+    "start": "set SKIP_PREFLIGHT_CHECK=true && set ESLINT_NO_DEV_ERRORS=true && set DISABLE_ESLINT_PLUGIN=true && react-scripts start",
+    "start:no-eslint": "set SKIP_PREFLIGHT_CHECK=true && set ESLINT_NO_DEV_ERRORS=true && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "resolutions": {
+    "eslint-plugin-react": "7.32.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
