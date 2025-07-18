@@ -32,8 +32,36 @@ export default function Banner() {
           “Një çantë, një palë syze apo shapka – nuk janë thjesht aksesorë. Janë
           pjesë e stilit tënd, që tregojnë personalitetin dhe të bëjnë të
           ndihesh unik çdo ditë.”
+          <br />
+          <strong>
+            Na shkruani ne instagram
+            <a
+              href="https://instagram.com/orlanshopping"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: Colors.primary, textDecoration: "underline" }}
+            >
+              Orlan Shopping
+            </a>
+            ose numrin e telefonit për më shumë modele&nbsp;
+            <a
+              href="https://wa.me/3553152486"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: Colors.primary, textDecoration: "underline" }}
+            >
+              +355 315 2486
+            </a>
+          </strong>
         </BannerDescription>
-        <BannerShopButton background="" color="primary">
+        <BannerShopButton
+          background=""
+          color="primary"
+          component="a"
+          href="https://instagram.com/orlanshopping"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           BLEJ TANI
         </BannerShopButton>
       </BannerContent>

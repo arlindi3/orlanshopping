@@ -14,7 +14,7 @@ import SearchBox from "./components/search";
 
 function App() {
   useEffect(() => {
-    document.title = "E-bag shop";
+    document.title = "Orlan Shopping";
   }, []);
 
   return (

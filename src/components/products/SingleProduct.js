@@ -41,7 +41,7 @@ export default function SingleProduct({ product, matches }) {
           </Stack>
         </ProductActionsWrapper>
         <a
-          href={`https://wa.me/355674152486?text=${encodeURIComponent(
+          href={`https://wa.me/355673152486?text=${encodeURIComponent(
             whatsappMessage
           )}`}
           target="_blank"

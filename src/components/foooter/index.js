@@ -13,6 +13,7 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import SendIcon from "@mui/icons-material/Send";
+import { Appheader } from "../../styles/appbar";
 
 export default function Footer() {
   return (
@@ -20,17 +21,36 @@ export default function Footer() {
       sx={{
         background: Colors.shaft,
         color: Colors.white,
-        p: { xs: 4, md: 10 },
-        pt: "12px",
-        pb: "12px",
-        fontSize: { xs: "12px", md: "16px" },
+        px: { xs: 2, md: 6 }, // reduced horizontal padding on desktop
+        py: { xs: 3, md: 4 }, // reduced vertical padding on desktop
+        fontSize: { xs: "12px", md: "15px" }, // slightly smaller font on desktop
       }}
     >
-      <Grid container spacing={2} justifyContent={"center"}>
-        <Grid item md={6} lg={4}>
-          <FooterTitle variant="body">rreth nesh</FooterTitle>
-          <br></br>
-          <Typography variant="caption2">
+      <Grid
+        container
+        spacing={{ xs: 3, md: 4 }} // reduced grid spacing on desktop
+        justifyContent="center"
+        alignItems="flex-start"
+      >
+        <Grid item xs={12} md={6} lg={4}>
+          <Appheader
+            variant="h4"
+            textAlign={{ xs: "center", md: "left" }}
+            color="#d1adcc"
+            sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }} // smaller header font
+          >
+            Orlan Shopping
+          </Appheader>
+          <Typography
+            variant="caption2"
+            sx={{
+              display: "block",
+              mt: 2,
+              textAlign: { xs: "center", md: "left" },
+              fontSize: { xs: "0.9rem", md: "1rem" }, // smaller text
+              color: Colors.dove_gray,
+            }}
+          >
             Prej më shumë se 15 vitesh, ne jemi të përkushtuar në sjelljen e
             stilit, cilësisë dhe përzgjedhjes më të mirë të aksesorëve për të
             gjithë ata që duan të duken dhe të ndihen mirë. Me dy dyqane fizikë
@@ -39,93 +59,83 @@ export default function Footer() {
             që ofrojmë është zgjedhur me kujdes për të kombinuar stilin
             bashkëkohor me çmimet e përballueshme.
           </Typography>
-          <Box sx={{ mt: 4, color: Colors.dove_gray }}>
-            <FacebookOutlinedIcon sx={{ mr: 1 }}></FacebookOutlinedIcon>
-            <TwitterIcon sx={{ mr: 1 }}></TwitterIcon>
-            <InstagramIcon sx={{ mr: 1 }}></InstagramIcon>
+          <Box
+            sx={{
+              mt: 2,
+              display: "flex",
+              justifyContent: { xs: "center", md: "flex-start" },
+              gap: 1.5, // reduced gap
+            }}
+          >
+            <Button
+              sx={{ minWidth: 0, p: 1, color: Colors.white }}
+              href="#"
+              aria-label="Facebook"
+            >
+              <FacebookOutlinedIcon />
+            </Button>
+            <Button
+              sx={{ minWidth: 0, p: 1, color: Colors.white }}
+              href="#"
+              aria-label="Twitter"
+            >
+              <TwitterIcon />
+            </Button>
+            <Button
+              sx={{ minWidth: 0, p: 1, color: Colors.white }}
+              href="https://www.instagram.com/orlanshopping/"
+              aria-label="Instagram"
+            >
+              <InstagramIcon />
+            </Button>
           </Box>
         </Grid>
-        <Grid item md={6} lg={2}>
-          <FooterTitle variant="body1">informacion</FooterTitle>
-          <List>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                rreth nesh
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                na kontaktoni
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                Privatësia &amp; politika
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                Kushtet &amp; termat
-              </Typography>
-            </ListItemText>
+        <Grid item xs={12} md={6} lg={2}>
+          <FooterTitle
+            variant="body1"
+            sx={{
+              mb: 1.5, // reduced margin
+              textAlign: { xs: "center", md: "left" },
+              fontWeight: 700,
+              fontSize: { xs: "1rem", md: "1.1rem" }, // smaller title
+            }}
+          >
+            Informacion
+          </FooterTitle>
+          <List sx={{ p: 0 }}>
+            {[
+              "Rreth nesh",
+              "Na kontaktoni",
+              "Privatësia & politika",
+              "Kushtet & termat",
+            ].map((text, idx) => (
+              <ListItemText
+                key={idx}
+                sx={{
+                  textAlign: { xs: "center", md: "left" },
+                  mb: 0.5, // reduced margin
+                }}
+              >
+                <Typography
+                  lineHeight={2}
+                  variant="caption2"
+                  sx={{
+                    fontSize: { xs: "0.9rem", md: "1rem" }, // smaller text
+                    color: Colors.dove_gray,
+                  }}
+                >
+                  {text}
+                </Typography>
+              </ListItemText>
+            ))}
           </List>
-        </Grid>
-        <Grid item md={6} lg={2}>
-          <FooterTitle variant="body1">llogaria ime</FooterTitle>
-          <List>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                Hyrje
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                Karroca ime
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                Llogaria ime
-              </Typography>
-            </ListItemText>
-            <ListItemText>
-              <Typography lineHeight={2} variant="caption2">
-                {" "}
-                Lista e dëshirave
-              </Typography>
-            </ListItemText>
-          </List>
-        </Grid>
-        <Grid item md={6} lg={4}>
-          <FooterTitle variant="body1">buletini</FooterTitle>
-          <Stack>
-            <SubscribeTf
-              sx={{ color: Colors.white }}
-              variant="standard"
-              label="Shkruani email-in"
-            ></SubscribeTf>
-            <Button
-              variant="contained"
-              sx={{ mt: 4, mb: 4 }}
-              startIcon={<SendIcon sx={{ color: Colors.white }}></SendIcon>}
-            >
-              abono
-            </Button>
-          </Stack>
         </Grid>
       </Grid>
       <Box
         sx={{
           textAlign: "center",
-          mt: 6,
-          fontSize: { xs: "12px", md: "14px" },
+          mt: { xs: 3, md: 4 }, // reduced margin top
+          fontSize: { xs: "12px", md: "13px" }, // smaller font
           color: Colors.dove_gray,
         }}
       >
@@ -135,7 +145,11 @@ export default function Footer() {
             href="https://www.instagram.com/aura.brand.tech/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: Colors.white, textDecoration: "underline" }}
+            style={{
+              color: Colors.white,
+              textDecoration: "underline",
+              fontWeight: 500,
+            }}
           >
             AuraBrand
           </a>{" "}

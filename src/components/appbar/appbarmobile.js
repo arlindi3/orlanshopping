@@ -25,7 +25,7 @@ export default function AppBarMobile({ matches }) {
       <IconButton onClick={() => setSearchBox(true)}>
         <SearchOutlinedIcon></SearchOutlinedIcon>
       </IconButton>
-      <Actions matches={matches}></Actions>
+      {/* <Actions matches={matches}></Actions> */}
     </AppbarContainer>
   );
 }
